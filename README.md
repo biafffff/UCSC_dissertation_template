@@ -1,14 +1,11 @@
-# UCSC_dissertation_template
-LaTeX dissertation template of Università Cattolica del Sacro Cuore of Milan
-
 # Università Cattolica del Sacro Cuore dissertation template
-This template let you write your thesis for UCSC following some standard graphical rules. 
+LaTeX dissertation template of Università Cattolica del Sacro Cuore of Milan. This template let you write your thesis following some standard graphical rules. 
 
 > LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents. 
 
-> When writing, the writer uses plain text as opposed to the formatted text found in WYSIWYG ("what you see is what you get") word processors like Microsoft Word.
-
 You should only focus on the content of your document, its layout will be managed by LaTeX directly.
+
+> When writing, the writer uses plain text as opposed to the formatted text found in WYSIWYG ("what you see is what you get") word processors like Microsoft Word.
 
 Not convinced? Have a look at some [demo pages](https://i.imgur.com/DYuJbmt.png).
 
