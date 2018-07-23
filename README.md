@@ -10,7 +10,7 @@ This template let you write your thesis for UCSC following some standard graphic
 
 You should only focus on the content of your document, its layout will be managed by LaTeX directly.
 
-Not convinced? Have a look at the some [demo pages](https://i.imgur.com/DYuJbmt.png).
+Not convinced? Have a look at some [demo pages](https://i.imgur.com/DYuJbmt.png).
 
 ![Sample](https://i.imgur.com/DYuJbmt.png)
 
