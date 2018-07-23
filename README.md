@@ -1,5 +1,6 @@
 # Università Cattolica del Sacro Cuore dissertation template
-LaTeX dissertation template of Università Cattolica del Sacro Cuore of Milan. This template let you write your thesis following some standard graphical rules. 
+LaTeX dissertation template of Università Cattolica del Sacro Cuore of Milan. 
+This template let you write your thesis following some standard graphical rules. 
 
 > LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents. 
 
