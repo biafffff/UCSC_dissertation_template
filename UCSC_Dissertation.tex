@@ -1,0 +1,300 @@
+
+% Dissertation Template Università Cattolica del Sacro Cuore
+
+\documentclass[a4paper, 11pt, twoside, openright]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+%\MakeOuterQuote{"}
+
+\usepackage[hmarginratio=1:1]{geometry}
+
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{subfigure}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{mathtools}          
+\usepackage{pdflscape}
+%\usepackage{fncychap} % Conny or (better) nothing
+%\mghrulefill{2pt}
+%\usepackage{caption} 
+\usepackage[labelfont=bf]{caption}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage[official]{eurosym}
+\usepackage{booktabs}
+\usepackage{flafter}
+\usepackage{indentfirst} % To indent first lines
+
+\usepackage[style=authoryear, isbn=false, url=false, maxcitenames=2]{biblatex} %maxnames=1
+\renewbibmacro{in:}{}
+\addbibresource{Bibliography.bib}
+
+%\usepackage{tocloft}
+%\setcounter{tocdepth}{1} % Only show chapters and sections in ToC
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{alltt}
+
+\usepackage{listings}
+\usepackage[shortlabels]{enumitem}
+%\usepackage{enumerate}
+
+\usepackage[bottom]{footmisc}
+\interfootnotelinepenalty=10000
+
+\usepackage{tikz}
+\usepackage{environ}
+
+\usepackage{multirow}
+\usepackage{xfrac}
+\usepackage{nicefrac}
+\usepackage{bigstrut}
+\usepackage{soul}
+\usepackage[all]{nowidow}
+\widowpenalty=1000
+\usepackage{verbatim}
+
+%\linespread{1.1}
+\usepackage[doublespacing]{setspace}
+
+% Title Page Definition
+\makeatletter
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+\def\ligne#1{%
+  \hbox to \hsize{%
+    \vbox{\centering #1}}}%
+\def\haut#1#2#3{%
+  \hbox to \hsize{%
+    \rlap{\vtop{\raggedright #1}}%
+    \hss
+    \clap{\vtop{\centering #2}}%
+    \hss
+    \llap{\vtop{\raggedleft #3}}}}%
+\def\bas#1#2#3{%
+  \hbox to \hsize{%
+    \rlap{\vbox{\raggedright #1}}%
+    \hss
+    \clap{\vbox{\centering #2}}%
+    \hss
+    \llap{\vbox{\raggedleft #3}}}}%
+\def\maketitle{%
+  \thispagestyle{empty}\vbox to \vsize{%
+    \haut{}{\@blurb}{}
+    \vfill
+    \ligne{\Large \@title}
+    \vspace{5mm}
+    \ligne{\Large \@author}
+    \vspace{1mm}\ligne{\texttt{<\@email>}}
+    \vspace{1cm}
+    \vfill
+    \vfill
+    \bas{}{\@location, \@date}{}
+    }%
+  \cleardoublepage
+  }
+\def\date#1{\def\@date{#1}}
+\def\author#1{\def\@author{#1}}
+\def\title#1{\def\@title{#1}}
+\def\location#1{\def\@location{#1}}
+\def\blurb#1{\def\@blurb{#1}}
+\def\email#1{\def\@email{#1}}
+
+% Abstract definition\newenvironment{abstract}%{\cleardoublepage\null \vfill\begin{center}
+\bfseries \abstractname \end{center}}{\vfill\null}
+
+% Fancy Header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{ %\scshape{\chaptername}\ \thechapter:% \ #1}{}}
+%\renewcommand{\sectionmark}[1]{%% \markboth{\sectionname% \ \thesection.\ #1}{}}
+%\renewcommand{\sectionmark}[1]{\markboth{\sectionname \ #1}{}}
+
+% OR \footnotesize !!!
+\fancyhf{}
+\fancyhead[LE]{\thepage \hspace{0.5cm} \leftmark} 
+\fancyhead[RO]{\nouppercase \rightmark \hspace{0.5cm} \thepage} 
+%\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{mypagestyle}{
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0pt}}
+
+% Avoid header/footer on blank pages
+\makeatletter\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page \else\hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi} \makeatother
+
+\usepackage{hyperref}
+%\usepackage[backref=page]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{coroll}[thm]{Corollary}
+
+\usepackage{txfonts}
+\usepackage{bbm}
+\usepackage{pxfonts}
+
+% Chapter style 
+
+%\makeatletter
+%\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+%\def\@makechapterhead#1{%
+%  \vspace*{10\p@}%
+%  {\parindent \z@ 
+%    {\raggedleft \reset@font
+%      \scshape \@chapapp{} \thechapter\par\nobreak}%
+%    \par\nobreak
+%    \vspace*{30\p@}
+%    \interlinepenalty\@M
+%    {\raggedright \Huge \bfseries #1}%
+%    \par\nobreak
+%    \hrulefill
+%    \par\nobreak
+%    \vskip 100\p@
+%  }}
+%\def\@makeschapterhead#1{%
+%  \vspace*{10\p@}%
+%  {\parindent \z@ 
+%    {\raggedleft \reset@font
+%      \scshape \vphantom{\@chapapp{} \thechapter}\par\nobreak}%
+%    \par\nobreak
+%    \vspace*{30\p@}
+%    \interlinepenalty\@M
+%    {\raggedright \Huge \bfseries #1}%
+%    \par\nobreak
+%    \hrulefill
+%    \par\nobreak
+%    \vskip 100\p@
+%  }}
+  
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+    %\bfseries
+      \reset@font \scshape \LARGE \scshape \@chapapp{} \thechapter \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \bfseries \Huge \strut #1\strut \par
+    \end{flushleft}
+    \vskip 100\p@
+  }}
+\def\@makeschapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+    %\bfseries
+      \reset@font \scshape \LARGE \vphantom{\thechapter} \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \bfseries \Huge \strut #1\strut \par
+    \end{flushleft}
+    \vskip 100\p@
+  }}
+
+%\makeatletter
+%\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+%\def\@makechapterhead#1{%
+%  \vspace*{10\p@}%
+%  {\parindent \z@ 
+%        \raggedleft
+%        \reset@font\huge\bfseries
+%        \begin{tabular}{c|p{15cm}}
+%          {\qquad\thechapter{}\  }
+%          &\quad
+%          \Huge #1
+%        \end{tabular}
+%        \par\nobreak
+%    \vskip 100\p@
+%  }}
+%\def\@makeschapterhead#1{%
+%  \vspace*{10\p@}%
+%  {\parindent \z@ 
+%        \raggedleft
+%        \reset@font\huge\bfseries
+%        \begin{tabular}{cp{15cm}}
+%          {\qquad\hphantom{\thechapter{}}\  }
+%          &\quad
+%          \Huge #1
+%        \end{tabular}
+%        \par\nobreak
+%    \vskip 100\p@
+%  }}
+
+% To add equation tag to environment*
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+% To set the first letter of each chapter bigger - Journal style
+\usepackage{lettrine}
+
+% To create a overbar line bigger than \bar and shorter than \overline
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+% To scale equation too long to fir the margins
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\begin{frontmatter}
+\frontmatter
+%\pagestyle{fancy}%\fncyfront
+	\include{Content/Title_Page} 			% not on TOC
+	\include{Content/Copyright_Notice}		% not on TOC
+	\include{Content/Dedication}			% not on TOC
+	%\addcontentsline{toc}{chapter}{Abstract}
+	\include{Content/Abstract}				% not on TOC
+	\include{Content/Acknowledgements}		% not on TOC
+	\tableofcontents
+	%\listoffigures 
+	%\listoftables
+	\include{Content/Preface}	
+%\end{frontmatter}
+
+% The float package, with the \newfloat and \listof commands, can be used to create lists of custom floating objects (e.g. programs, algorithms, etc.). The tocloft package can be used to modify their layout.
+
+%\begin{mainmatter}
+\mainmatter
+%\fncymain
+	\include{Content/Introduction}
+	\include{Content/Chapter_1}
+	\include{Content/Chapter_2}
+	\include{Content/Chapter_3}
+	\include{Content/Chapter_4}
+	\appendix
+	\include{Content/Appendix_A}
+	\include{Content/Appendix_B}	
+%\end{mainmatter}
+
+%\begin{backmatter}
+\backmatter
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\printbibliography	
+%\end{backmatter}
+
+\end{document}
