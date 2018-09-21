@@ -1,0 +1,113 @@
+
+\pagestyle{fancy}
+
+\chapter{\LaTeX \, Use}
+\label{ch:latex}
+
+\section{Sectioning}
+\label{example-Section}
+
+In order to create a new section use the command \code{\textbackslash section\{\}}. Similarly you can use \code{\textbackslash subsection\{\}}, \code{\textbackslash subsubsection\{\}}. If you want to unnumbered a section write \code{\textbackslash section*\{\}}. 
+\subsection{Sub Section}
+\subsection*{Unnumbered Section}
+
+\section{Listings}
+
+Numbered list. Obtained using the \textit{enumerate} environment.
+\begin{verbatim}
+\begin{enumerate}
+	\item Example 
+	\item Example 
+	\item Example	
+\end{enumerate}
+\end{verbatim}
+
+\begin{enumerate}
+	\item Example 
+	\item Example 
+	\item Example	
+\end{enumerate}
+
+Itemized list. Obtained using the \textit{itemize} environment.
+\begin{itemize}
+	\item Example
+	\item Example
+	\item Example	
+\end{itemize}
+
+
+\section{Math Environment}
+
+The star after the command, avoid printing the equation tag (\code{\textbackslash equation*\{\}}). Without the equation will be numbered and can be referenced (see Equation \eqref{example-1}). You can reference also sections (see Section \ref{example-Section}).
+
+The expected value of $X$ is
+\begin{align*}
+	\mathbb{E}[X] &= \int_{1}^{c} x \; F(x) \; dx \\[0.25cm]
+				  &= \int_{1}^{c} x \ \frac{1}{x} \ \frac{1}{log(c)} \; dx \\[0.25cm]
+				  &= \frac{1}{log(c)} \int_{1}^{c} dx = \frac{c - 1}{log(c)} \\
+	\label{example-1}			  
+\end{align*}
+
+\begin{verbatim}
+\begin{gather*}
+	y =  \omega + \beta_1 x_1 + \beta_2 x_2
+\end{gather*}
+\end{verbatim}
+\begin{gather*}
+	y =  \omega + \beta_1 x_1 + \beta_2 x_2
+\end{gather*}
+
+\section{Tables}
+
+To create tables use this useful website \href{http://www.tablesgenerator.com}{www.tablesgenerator.com}. It is preferable to use the \textit{Booktabs table style} option as for example in Table \ref{tab:regression}.
+
+\begin{table}[!h]
+\centering
+\caption{Linear Regression Model 1}
+\label{tab:regression}
+\begin{tabular}{@{}llrrlrl@{}}
+\toprule
+\multicolumn{1}{r}{\textbf{}} &  & \textbf{Estimate} & \textbf{Std. Error} & \multicolumn{1}{r}{\textbf{t value}} & \textbf{Pr(\textgreater | t |)} & \textbf{} \\ \midrule
+\multicolumn{1}{r}{(Intercept)} &  & 119.7719 & 0.5723 & \multicolumn{1}{r}{209.27} & 0.0000 &  \\
+\multicolumn{1}{r}{x} &  & -0.5138 & 0.0905 & \multicolumn{1}{r}{-5.68} & 0.0000 &  \\
+ &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} &  \\
+\multicolumn{7}{l}{Residual standard error: 20.13 on 1386 degrees of freedom} \\
+\multicolumn{4}{l}{Multiple R-squared: 0.02273} & \multicolumn{3}{l}{Adjusted R-squared: 0.02202} \\
+\multicolumn{4}{l}{F-statistic: 32.24 on 1 and 1386 DF} & \multicolumn{3}{l}{p-value: 1.662e-08} \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Figures}
+
+To add figures use the following line of command:
+
+\begin{verbatim}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{Logo-mono.png}
+\caption{Example}
+\label{fig:logo}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{Logo-mono.png}
+\caption{Example}
+\label{example-figure}
+\end{figure}
+
+\section{Bibliography}
+
+You can cite other papers/publications with the command \code{\textbackslash textcite\{\}}. For example writing \code{\textbackslash textcite\{Bianchi2016\}} I obtain this citation: \textcite{Bianchi2016}, that will be printed automatically in alphabetical order in the \textit{Bibliography} at the end of the work.
+
+\section{Troubleshooting}
+
+In case of issues with your \LaTeX$\,$ code please visit this useful website full of questions and answers: \href{https://tex.stackexchange.com}{www.tex.stackexchange.com}.
+
+
+
+
+
+
+
