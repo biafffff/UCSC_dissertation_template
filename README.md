@@ -16,7 +16,7 @@ Not convinced? Have a look at some [demo pages](https://i.imgur.com/DYuJbmt.png)
 Installing this template from source, like any LaTeX theme, involves three easy steps:
 1. **Download the source** as a zip archive of the latest development version.
 2. **Copy** the zip archive in a new folder. All the materials (images, biography) related to your thesis should be inside this folder.
-3. **Open the file** `UCSC_Dissertation.tex` and compile it. In order to so, you should:
+3. **Open the file** `UCSC_Dissertation.tex` and compile it. In order to do so, you should:
    - Donwload a full TeX distribution on the [LaTeX Project](https://www.latex-project.org/get/) website. Then donwload a TeX editor.
    - or Register on [ShareLaTeX](https://www.sharelatex.com) or on [Overleaf](https://www.overleaf.com) website and use their online compiler. This second option is suggested for one-time users.
    
