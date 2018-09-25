@@ -24,3 +24,6 @@ In there are no error in your code, a `UCSC_Dissertation.pdf` will be printed as
    
 ## Usage
 A quick and introductory guide on using this template can be found in the `UCSC_Dissertation.pdf` file.
+
+## Presentation
+Users can also use the pre-loaded Beamer template for their dissertation presentation. Please refer to the [UCSC Beamer](https://github.com/Francesco-Bianchi/UCSC_beamer_template) page to find proper support.
