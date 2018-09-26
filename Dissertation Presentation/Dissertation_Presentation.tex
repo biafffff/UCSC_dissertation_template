@@ -1,15 +1,28 @@
 
-% Dissertation template Università Cattolica del Sacro Cuore
-% Dissertation presentation template
+% Dissertation presentation template Università Cattolica del Sacro Cuore
 % Created by Francesco Bianchi
+% https://github.com/Francesco-Bianchi
 % Fall 2018
-
-% NB Compile with XeLaTeX!
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX!
 
 \documentclass[11pt, xcolor=dvipsnames]{beamer}
-\usetheme[numbering=fraction, progressbar=frametitle, sectionpage=none, block=fill]{metropolis}
 
+\usetheme[numbering=fraction, progressbar=frametitle, sectionpage=none, block=fill]{metropolis}
 % regular, smallcaps, allsmallcaps, allcaps
+
+% Comment lines (16-25) if you have installed the font on your computer
+\usepackage{fontspec} 
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+ Path = Fira Sans font,
+ Extension = .otf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ SmallCapsFont = *-SmallCaps]
+ {FiraSans}
 
 \usepackage{appendixnumberbeamer}
 \usepackage{graphicx}
