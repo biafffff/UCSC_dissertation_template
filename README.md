@@ -6,7 +6,7 @@ This template let you write your thesis following some standard graphical rules.
 
 You should only focus on the content of your document, its layout will be managed by LaTeX directly.
 
-> When writing, the writer uses plain text as opposed to the formatted text found in WYSIWYG ("what you see is what you get") word processors like Microsoft Word.
+> When writing, the writer uses plain text (WYSIWYM "What you see is what you mean") as opposed to the formatted text found in WYSIWYG ("What you see is what you get") word processors like Microsoft Word.
 
 Not convinced? Have a look at some [demo pages](https://i.imgur.com/DYuJbmt.png).
 
@@ -17,8 +17,8 @@ Installing this template from source, like any LaTeX theme, involves three easy 
 1. **Download the source** as a zip archive of the latest development version.
 2. **Copy** the zip archive in a new folder. All the materials (images, biography) related to your thesis should be inside this folder.
 3. **Open the file** `UCSC_Dissertation.tex` and compile it. In order to do so, you should:
-   - Donwload a full TeX distribution on the [LaTeX Project](https://www.latex-project.org/get/) website. Then donwload a TeX editor.
-   - or Register on [ShareLaTeX](https://www.sharelatex.com) or on [Overleaf](https://www.overleaf.com) website and use their online compiler. This second option is suggested for one-time users.
+  - Donwload a full TeX distribution on the [LaTeX Project](https://www.latex-project.org/get/) website. Then donwload a TeX editor, as for example [TeXmaker](http://www.xm1math.net/texmaker/) or [TeXstudio](http://texstudio.sourceforge.net).
+   - or Register on [Overleaf](https://www.overleaf.com) website and use its online compiler. This second option is suggested for one-time users.
    
 In there are no error in your code, a `UCSC_Dissertation.pdf` will be printed as an output.
    
