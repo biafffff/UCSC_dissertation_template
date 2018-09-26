@@ -1,6 +1,7 @@
 
-% Dissertation Template Università Cattolica del Sacro Cuore
+% Dissertation template Università Cattolica del Sacro Cuore
 % Created by Francesco Bianchi
+% https://github.com/Francesco-Bianchi
 % Fall 2018
 
 \documentclass[a4paper, 11pt, twoside, openright]{book}
@@ -9,6 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage[autostyle, english = american]{csquotes}
+%\MakeOuterQuote{"}
 
 \usepackage[hmarginratio=1:1]{geometry}
 
@@ -109,21 +111,14 @@
 \def\blurb#1{\def\@blurb{#1}}
 \def\email#1{\def\@email{#1}}
 
-% Abstract definition
-\newenvironment{abstract}%
-{\cleardoublepage\null \vfill\begin{center}
-\bfseries \abstractname \end{center}}
-{\vfill\null}
+% Abstract definition\newenvironment{abstract}%{\cleardoublepage\null \vfill\begin{center}
+\bfseries \abstractname \end{center}}{\vfill\null}
 
 % Fancy Header
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{
-\chaptername}\ \thechapter:
- \ #1}{}}
-%\renewcommand{\sectionmark}[1]{%
-% \markboth{\sectionname
-% \ \thesection.\ #1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{ %\scshape{\chaptername}\ \thechapter:% \ #1}{}}
+%\renewcommand{\sectionmark}[1]{%% \markboth{\sectionname% \ \thesection.\ #1}{}}
 %\renewcommand{\sectionmark}[1]{\markboth{\sectionname \ #1}{}}
 
 % OR \footnotesize !!!
@@ -139,9 +134,7 @@
 \renewcommand{\footrulewidth}{0pt}}
 
 % Avoid header/footer on blank pages
-\makeatletter
-\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page \else\hbox{}\thispagestyle{empty}\newpage
-\if@twocolumn\hbox{}\newpage\fi\fi\fi} \makeatother
+\makeatletter\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page \else\hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi} \makeatother
 
 \usepackage{hyperref}
 %\usepackage[backref=page]{hyperref}
@@ -275,10 +268,9 @@
 
 %\begin{frontmatter}
 \frontmatter
-%\pagestyle{fancy}
-%\fncyfront
+%\pagestyle{fancy}%\fncyfront
 	\include{Content/Title_Page} 			% not on TOC
-	%\include{Content/Copyright_Notice}		% not on TOC
+	\include{Content/Copyright_Notice}		% not on TOC
 	\include{Content/Dedication}			% not on TOC
 	%\addcontentsline{toc}{chapter}{Abstract}
 	\include{Content/Abstract}				% not on TOC
@@ -286,7 +278,7 @@
 	\tableofcontents
 	%\listoffigures 
 	%\listoftables
-	%\include{Content/Preface}	
+	\include{Content/Preface}	
 %\end{frontmatter}
 
 % The float package, with the \newfloat and \listof commands, can be used to create lists of custom floating objects (e.g. programs, algorithms, etc.). The tocloft package can be used to modify their layout.
@@ -301,7 +293,7 @@
 	\include{Content/Chapter_4}
 	\appendix
 	\include{Content/Appendix_A}
-	%\include{Content/Appendix_B}	
+	\include{Content/Appendix_B}	
 %\end{mainmatter}
 
 %\begin{backmatter}
