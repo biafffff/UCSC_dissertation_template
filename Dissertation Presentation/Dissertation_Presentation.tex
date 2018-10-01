@@ -79,7 +79,8 @@
 \definecolor{Metropolis-background}{RGB}{250,250,250}
 
 \setbeamercolor{frametitle}{fg=White, bg=Cattolica-Blue}
-\setbeamercolor{title separator}{fg=Cattolica-Yellow}\setbeamercolor{progress bar in head/foot}{fg=Cattolica-Yellow, bg=Metropolis-background}
+\setbeamercolor{title separator}{fg=Cattolica-Yellow}
+\setbeamercolor{progress bar in head/foot}{fg=Cattolica-Yellow, bg=Metropolis-background}
 \setbeamercolor{alerted text}{fg=Cattolica-Yellow}
 
 \setbeamertemplate{title graphic}{
@@ -104,11 +105,12 @@
 %%%%%%%% Title page definition %%%%%%%%
 
 \title{Main Title} % \newline Main Title (Cont.)}
-\subtitle{Thesis Dissertation}\author{Supervisor: Name Surname \\ Co-Supervisor: Name Surname \medskip \\
+\subtitle{Thesis Dissertation}
+\author{Supervisor: Name Surname \\ Co-Supervisor: Name Surname \medskip \\
 Candidate: Name Surname \\}
+\date{Milan, December 31, 2018}
 \institute{Università Cattolica del Sacro Cuore \\ M.Sc. in \LaTeX \\ Academic Year 2018 $-$ 2019}
 %\institute{Università Cattolica del Sacro Cuore \\ B.Sc. in ******* \\ Academic Year 20** $-$ 20**}
-\date{Milan, December 31, 2018}
 \titlegraphic{\includegraphics[width=0.30\textwidth]{Logo-Grey.pdf}}
 
 %%%%%%%%  %%%%%%%%
@@ -211,7 +213,8 @@ The definition of asymptote is $\hdots$
 If you want to include (\textsf{R}) code in your presentation, please add \texttt{\textbackslash begin\{frame\}[fragile]} at the beginning of the slide. \bigskip
 \begin{lstlisting}
 f <- function(x) log2(abs(x)) + (1/x) * exp(-1/2*x)
-plot(f, -4, 4, main="Exercise 1 Plot")
+
+plot(f, -4, 4, main="Exercise 1 Plot")
 abline(h=0.32, lty=2)
 abline(v=0.0, lty=2)
 \end{lstlisting} 
