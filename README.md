@@ -1,4 +1,7 @@
 # Università Cattolica del Sacro Cuore dissertation template
+
+[![HitCount](http://hits.dwyl.io/https://github.com/Francesco-Bianchi//https://github.com/Francesco-Bianchi/UCSC_dissertation_template.svg)](http://hits.dwyl.io/https://github.com/Francesco-Bianchi//https://github.com/Francesco-Bianchi/UCSC_dissertation_template)
+
 LaTeX dissertation template of Università Cattolica del Sacro Cuore of Milan. <br />
 This template let you write your thesis following some standard graphical rules. 
 
