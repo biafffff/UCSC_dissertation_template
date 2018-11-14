@@ -23,7 +23,7 @@ Installing this template from source, like any LaTeX theme, involves three easy 
     - Donwload a full TeX distribution on the [LaTeX Project](https://www.latex-project.org/get/) website. Then donwload a TeX editor, as for example [TeXmaker](http://www.xm1math.net/texmaker/) or [TeXstudio](http://texstudio.sourceforge.net).
     - or Register on [Overleaf](https://www.overleaf.com) website and use its online compiler. This second option is suggested for one-time users.
    
-In there are no errors in your code, a `UCSC_Dissertation.pdf` will be printed as an output.
+If there are no errors in your code, a `UCSC_Dissertation.pdf` will be printed as an output.
    
 ## Usage
 A quick and introductory guide on using this template can be found in the `UCSC_Dissertation.pdf` file.
